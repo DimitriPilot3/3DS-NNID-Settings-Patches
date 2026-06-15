@@ -1,0 +1,80 @@
+﻿<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>cave</title>
+	<meta name="viewport" content="width=220" />
+<!--
+	<style type="text/css">
+		.topContent {
+			position: absolute;
+			top: 0;
+			left: 15px;
+			width: 400px;
+			height: 220px;
+			z-index: 100;
+			overflow: hidden;
+		}
+		.bottomContent {
+			position: absolute;
+			top: 220px;
+			left: 40px;
+			width: 320px;
+			height: 240px;
+			overflow: hidden;
+			text-align: center;
+		}
+		.topText01 .inner {
+			width: 350px;
+			height: 130px;
+			padding: 10px 10px 5px;
+			display: -webkit-box;
+			-webkit-box-align: center;
+			-webkit-box-pack: center;
+			text-align: center;
+		}
+	</style>
+-->
+	<link rel="stylesheet" href="./css/all.min.css" media="screen">
+	<script src="./js/lib.min.js"></script>
+</head>
+
+<body data-content-lang="EU_English">
+	<article id="helloworld" class="current">
+		<!-- Top screen content -->
+		<div class="topContent">
+			<div class="topText01">
+				<p class="inner">This is the top screen</p>
+			</div>
+		</div>
+
+		<!-- Bottom screen content -->
+		<div class="bottomContent">
+			<div class="btText01">
+				<p class="inner">This is the bottom screen</p>
+			</div>
+
+			<div class="btCommon">
+				<a href="#" class="btCommonBtn02 _btn_back black">Exit</a>
+				<a href="#" class="btCommonBtn03 _btn_next">Reload Page</a>
+			</div>
+		</div>
+	</article>
+	<script>
+		"use strict"
+
+		cave.snd_playBgm("ACT_5")
+		cave.act_setHeaderMessage("This is a header message")
+
+		$('.btCommonBtn02').on('click', function () {
+			cave.snd_playSe('SE_ACT_END')
+			cave.jump_toSettingsTop()
+		})
+		$('.btCommonBtn03').on('click', function () {
+			cave.snd_playSe('SE_ACT_OK_SUB')
+			location.reload()
+		})
+	</script>
+</body>
+
+</html>

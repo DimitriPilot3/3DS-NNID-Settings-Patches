@@ -1,0 +1,12 @@
+# VSCode
+.vscode
+
+# Publish
+*.zip
+
+# dumped input files
+AccountHeader.arc
+
+# compiled objects/graphics
+build
+out
